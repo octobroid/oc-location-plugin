@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Subdistrict
+
+# Model Form Field configuration
+form: $/octobro/location/models/subdistrict/fields.yaml
+
+# Model Class name
+modelClass: Octobro\Location\Models\Subdistrict
+
+# Default redirect location
+defaultRedirect: octobro/location/subdistricts
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: octobro/location/subdistricts/update/:id
+    redirectClose: octobro/location/subdistricts
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: octobro/location/subdistricts
+    redirectClose: octobro/location/subdistricts
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

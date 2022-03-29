@@ -1,0 +1,12 @@
+1.0.1: First version of Location
+1.0.2:
+  - Seed States
+  - seed_states.php
+1.0.3:
+  - Create Districts
+  - create_districts_table.php
+  - seed_districts.php
+1.0.4:
+  - Create Subdistrict
+  - create_subdistricts_table.php
+  - seed_subdistricts.php

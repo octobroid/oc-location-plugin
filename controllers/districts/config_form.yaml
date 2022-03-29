@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: District
+
+# Model Form Field configuration
+form: $/octobro/location/models/district/fields.yaml
+
+# Model Class name
+modelClass: Octobro\Location\Models\District
+
+# Default redirect location
+defaultRedirect: octobro/location/districts
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: octobro/location/districts/update/:id
+    redirectClose: octobro/location/districts
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: octobro/location/districts
+    redirectClose: octobro/location/districts
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
