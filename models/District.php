@@ -27,7 +27,9 @@ class District extends Model
     /**
      * @var array rules for validation
      */
-    public $rules = [];
+    public $rules = [
+        'name' => 'required'
+    ];
 
     /**
      * @var array Attributes to be cast to native types
@@ -62,11 +64,23 @@ class District extends Model
      */
     public $hasOne = [];
     public $hasMany = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'country' => 'RainLab\Location\Models\Country',
+        'state' => 'RainLab\Location\Models\State'
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function beforeSave()
+    {
+        if ($this->state) {
+            if ($this->state->country) {
+                $this->country = $this->state->country;
+            }
+        }
+    }
 }

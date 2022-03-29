@@ -93,4 +93,25 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+    /**
+     * Registers back-end settings for this plugin.
+     *
+     * @return array
+     */
+    public function registerSettings()
+    {
+        return [
+            'districts' => [
+                'label'       => 'Districts',
+                'description' => 'Manage districts',
+                'category'    => 'rainlab.location::lang.plugin.name',
+                'url'         => Backend::url('octobro/location/districts'),
+                'icon'        => 'icon-map-marker',
+                'permissions' => ['rainlab.location.access_settings'],
+                'order'       => 500,
+                'keywords'    => 'districts',
+            ],
+        ];
+    }
 }

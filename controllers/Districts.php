@@ -2,6 +2,7 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use System\Classes\SettingsManager;
 
 /**
  * Districts Backend Controller
@@ -30,6 +31,7 @@ class Districts extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Octobro.Location', 'location', 'districts');
+        BackendMenu::setContext('October.System', 'system', 'settings');
+        SettingsManager::setContext('Octobro.Location', 'districts');
     }
 }
