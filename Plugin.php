@@ -102,6 +102,16 @@ class Plugin extends PluginBase
     public function registerSettings()
     {
         return [
+            'subdistricts' => [
+                'label'       => 'Subdistricts',
+                'description' => 'Manage subdistricts',
+                'category'    => 'rainlab.location::lang.plugin.name',
+                'url'         => Backend::url('octobro/location/subdistricts'),
+                'icon'        => 'icon-map-marker',
+                'permissions' => ['rainlab.location.access_settings'],
+                'order'       => 500,
+                'keywords'    => 'subdistricts',
+            ],
             'districts' => [
                 'label'       => 'Districts',
                 'description' => 'Manage districts',
@@ -111,7 +121,7 @@ class Plugin extends PluginBase
                 'permissions' => ['rainlab.location.access_settings'],
                 'order'       => 500,
                 'keywords'    => 'districts',
-            ],
+            ]
         ];
     }
 }

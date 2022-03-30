@@ -6,3 +6,24 @@ columns:
     id:
         label: ID
         searchable: true
+    name:
+        label: Name
+        searchable: true
+    code:
+        label: Code
+        searchable: true
+    district:
+        label: District
+        relation: district
+        select: name
+        searchable: true
+    state:
+        label: State
+        relation: state
+        select: name
+        searchable: true
+    country:
+        label: Country
+        relation: country
+        select: name
+        searchable: true

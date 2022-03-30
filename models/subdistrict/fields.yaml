@@ -3,6 +3,14 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    name:
+        label: Name
+        span: auto
+    code:
+        label: Code
+        span: auto
+    district:
+        label: District
+        type: relation
+        emptyOption: --
+        span: auto

@@ -62,11 +62,28 @@ class Subdistrict extends Model
      */
     public $hasOne = [];
     public $hasMany = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'country' => 'RainLab\Location\Models\Country',
+        'state' => 'RainLab\Location\Models\State',
+        'district' => 'Octobro\Location\Models\District'
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function beforeSave()
+    {
+        if ($this->district) {
+            if ($this->district->state) {
+                $this->state = $this->district->state;
+
+                if ($this->district->state->country) {
+                    $this->country = $this->district->state->country;
+                }
+            }
+        }
+    }
 }
