@@ -32,7 +32,7 @@ class SeedStates extends Seeder
 
         $countryId = $country->id;
 
-        $file = Reader::createFromPath('files/states.csv');
+        $file = Reader::createFromPath('plugins/octobro/location/files/states.csv');
         $seeds = $file->getRecords();
 
         foreach ($seeds as $key => $seed) {
